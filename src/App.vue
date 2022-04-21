@@ -1,21 +1,17 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Assignment 1</router-link> |
+    <router-link to="/assignment-two">Assignment 2</router-link> |
+    <router-link to="/test">Test</router-link>
   </nav>
-  <router-view />
+  <div class="main-page">
+    <router-view />
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
+<style lang="scss" scoped>
 nav {
+  text-align: center;
   padding: 30px;
 
   a {
@@ -26,5 +22,10 @@ nav {
       color: #42b983;
     }
   }
+}
+
+.main-page {
+  @apply container mx-auto max-w-screen-lg;
+  @apply px-0 md:px-4;
 }
 </style>
